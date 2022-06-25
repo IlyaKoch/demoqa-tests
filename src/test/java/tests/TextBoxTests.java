@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TextBoxTests {
+
     @BeforeAll
     static void beforeAll(){
         Configuration.startMaximized = true;
@@ -27,5 +28,4 @@ public class TextBoxTests {
         $("#output #currentAddress").shouldHave(text("Alex123"));
         $("#output #permanentAddress").shouldHave(text("Alexey234"));
     }
-
 }
