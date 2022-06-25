@@ -10,11 +10,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class PracticeFormTest {
+
     @BeforeAll
     static void beforeAll(){
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://demoqa.com";
     }
+
     @Test
     void formTest(){
         open("/automation-practice-form");
@@ -37,7 +39,6 @@ public class PracticeFormTest {
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Noida")).click();
         $("#submit").click();
-
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Ilya"),
                 text("Kochetkov"),
